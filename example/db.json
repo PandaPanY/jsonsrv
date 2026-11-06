@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello",
+      "body": "body one",
+      "user": "typicode",
+      "author": { "name": "typicode", "email": "typicode@example.com" },
+      "tags": ["json", "server"],
+      "views": 150
+    },
+    {
+      "id": 2,
+      "title": "json-server tips",
+      "body": "learn json-server with lowdb",
+      "user": "typicode",
+      "author": { "name": "typicode" },
+      "tags": ["json"],
+      "views": 15
+    },
+    {
+      "id": 3,
+      "title": "Hello world",
+      "body": "internet culture guide",
+      "user": "gopher",
+      "author": { "name": "gopher" },
+      "tags": ["gopher", "tutorial"],
+      "views": 105
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Meow! And Nyan!",
+      "postId": 1,
+      "votes": 3,
+      "author": { "name": "typicode" }
+    },
+    {
+      "id": 2,
+      "body": "I like cats",
+      "postId": 1,
+      "votes": 10,
+      "author": { "name": "gopher" }
+    },
+    {
+      "id": 3,
+      "body": "Internet rocks",
+      "postId": 2,
+      "votes": 1,
+      "author": { "name": "typicode" }
+    }
+  ],
+  "users": [
+    { "id": 1, "name": "typicode", "age": 30 },
+    { "id": 2, "name": "gopher", "age": 25 }
+  ],
+  "profile": { "name": "typicode", "github": "typicode/json-server" }
+}

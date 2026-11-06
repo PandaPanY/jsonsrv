@@ -1,0 +1,10 @@
+# 构建产物
+/dist/
+/jsonsrv
+/jsonsrv.exe
+*.test
+*.out
+
+# 对照和性能测试的工作目录、参考版 json-server
+/.work/
+/.ref/

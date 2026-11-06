@@ -1,0 +1,75 @@
+# 边界与写操作差分：默认模式对照 v1 1.0.0-beta.15，数据 compare-db2.json。语法同 requests-v1.txt。
+
+@group read
+GET /books?price=10
+GET /books?price:eq=10
+GET /books?categoryId=1
+GET /books?id=1
+GET /books?inStock=true
+GET /books?inStock:eq=true
+GET /books?rating=4.5
+GET /books?labels=x
+GET /books?labels:contains=x
+GET /books?title=Zig
+GET /books?meta.lang=zh
+GET /books?meta.pages:gte=150
+GET /books?price:in=10,20
+GET /books?title:in=Zig,Go%20Lang
+GET /books?authorId:in=a1,a3
+GET /books?categoryId:ne=1
+GET /books?price:lt=10
+GET /books?title:lt=a
+GET /books?rating:gte=4
+GET /books?title=%E4%B8%AD%E6%96%87%E4%B9%A6
+GET /books?nofield=1
+GET /books?nofield:ne=1
+GET /books?price:bogus=1
+GET /books?_where={"or":[{"price":{"lt":10}},{"price":{"gt":25}}]}
+GET /books?_where={"price":10}
+GET /books?_where={"price":{"in":[10,20]}}
+GET /books?_where={"meta":{"lang":{"eq":"zh"}}}
+GET /books?_where={"title":{"contains":"GO"}}
+GET /books?_where={"not":{"price":{"gt":5}}}
+GET /books?_where=[]
+GET /books?_where={}
+GET /books?_where={"categoryId":{"eq":"1"}}
+GET /books?_where={"or":[]}
+GET /books?_page=1
+GET /books?_per_page=2
+GET /books?_page=0&_per_page=2
+GET /books?_page=-1&_per_page=2
+GET /books?_page=2&_per_page=0
+GET /books?_page=2&_per_page=abc
+GET /books?_page=abc
+GET /empties?_page=1
+GET /books?_page=1&_per_page=2&_sort=-price
+GET /books?_sort=-rating
+GET /books?_sort=meta.pages
+GET /books?_sort=nofield
+GET /books?_sort=-title
+GET /books/
+GET /books/1/
+GET /settings/
+GET /books/3
+GET /nums/1
+
+@group write-empty
+POST /empties {"a":1}
+POST /empties {"a":2}
+POST /books
+
+@group write-errors
+PUT /books/999 {"a":1}
+PATCH /books/999 {"a":1}
+DELETE /books/999
+POST /newres {"a":1}
+DELETE /settings
+PUT /settings {"theme":"x"}
+POST /db {"a":1}
+
+@group write-update
+PUT /books/1 {"id":99,"title":"T"}
+PATCH /books/2 {"meta":{"lang":"fr"}}
+POST /authors {"name":"New"}
+POST /books {}
+DELETE /authors/a1?_dependent=books

@@ -1,0 +1,75 @@
+# json-server v1（1.0.0-beta.15）README 示例和常用写法（对照默认模式）
+# 语法: METHOD 路径 [@Header:值] [请求体]；@group 组名 = 重置数据并重启服务
+# 所有请求自动附带 Origin: http://localhost:5173，GET 自动补发 HEAD 比较。
+
+@group read
+GET /posts
+GET /posts/1
+GET /posts/2
+GET /posts/999
+GET /posts?_embed=comments
+GET /comments?_embed=post
+GET /comments/1?_embed=post
+GET /posts/1?_embed=comments
+GET /posts/1?_embed=nope
+GET /posts?author.name:eq=alice
+GET /posts?title:contains=post
+GET /posts?title:startsWith=Post%201
+GET /posts?title:endsWith=%201
+GET /posts?views:gt=200
+GET /posts?views:gte=200
+GET /posts?views:lt=30
+GET /posts?id:in=2,3,4
+GET /posts?id:ne=1
+GET /posts?title:eq=Post%202
+GET /mixed?s:eq=apple
+GET /mixed?s:eq=APPLE
+GET /mixed?v:ne=10
+GET /posts?views:contains=25
+GET /mixed?s:startsWith=app
+GET /mixed?s:endsWith=pple
+GET /posts?_sort=title
+GET /posts?_sort=-views
+GET /posts?_sort=author.name,-views
+GET /mixed?_sort=v
+GET /mixed?_sort=s
+GET /posts?q=post
+GET /posts?q=Post
+GET /posts?_page=2&_per_page=10
+GET /posts?_page=1&_per_page=3
+GET /posts?_page=9&_per_page=10
+GET /posts/1/comments
+GET /posts?_start=0&_end=2
+GET /posts?_limit=3
+GET /posts?_start=20&_end=30
+GET /posts?_start=-3&_limit=2
+GET /posts?_end=999
+GET /mixed?s=APPLE
+GET /posts?_where={"or":[{"views":{"gt":200}},{"author":{"name":{"lt":"b"}}}]}
+GET /posts?_where={"author":{"name":{"eq":"bob"}}}&_page=1&_per_page=3
+GET /posts?_where={"author":{"name":{"lt":"b"}}}&_page=1&_per_page=3
+GET /posts?_where={"author.name":{"eq":"bob"}}&_page=1&_per_page=3
+GET /articles?_where=notjson
+GET /articles/1?_embed=notes
+GET /movies/1?_embed=reviews
+GET /images/1?_embed=thumbs
+GET /images/1?_embed=thumbs&_embed=comments
+GET /notes/1?_embed=article
+GET /people/1?_embed=address
+GET /articles/1/notes
+GET /movies/1/reviews
+GET /images/1/thumbs
+GET /profile
+GET /db
+GET /
+
+@group write
+POST /posts {"title":"new post","views":999}
+POST /posts {"id":2,"title":"dup id"}
+POST /mixed {"s":"fresh"}
+PUT /posts/2 {"title":"put replaced"}
+PATCH /posts/3 {"views":42}
+PUT /profile {"name":"putter"}
+PATCH /profile {"name":"patcher"}
+DELETE /posts/4?_dependent=comments
+GET /posts/4

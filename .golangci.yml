@@ -1,0 +1,11 @@
+# golangci-lint 配置（v2 格式）。
+# 默认启用 errcheck/govet/ineffassign/staticcheck/unused；
+# 对 fmt.Fprintf(os.Stdout) 等"写标准输出几乎不会失败"的惯用法做豁免。
+version: "2"
+linters:
+  settings:
+    errcheck:
+      exclude-functions:
+        - fmt.Fprint
+        - fmt.Fprintf
+        - fmt.Fprintln

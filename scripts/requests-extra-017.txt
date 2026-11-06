@@ -1,0 +1,57 @@
+# 边界与写操作差分：--legacy 对照 json-server 0.17.4，数据 compare-db2.json。语法同 requests-v1.txt。
+
+@group read
+GET /books?labels=x
+GET /books?meta.lang=en
+GET /books?nofield=1
+GET /books?title=
+GET /books?_sort=rating
+GET /books?_sort=rating,price&_order=desc,asc
+GET /books?_sort=meta.pages&_order=desc
+GET /books?_limit=0
+GET /books?_limit=abc
+GET /books?_start=99
+GET /books?_end=-1
+GET /books?_page=0
+GET /books?_page=abc&_limit=2
+GET /categories/1/books
+GET /categories/999/books
+GET /boxes/1/items
+GET /statuses/1/logs
+GET /books/1/nothing
+GET /categories/1?_embed=books
+GET /books/1?_expand=category
+GET /books/4?_expand=category
+GET /books?_expand=category&_expand=author
+GET /categories?_embed=books&_limit=1
+GET /books?q=30
+GET /books?q=rust&_limit=1
+GET /books?q=
+GET /settings?_embed=x
+GET /books/abc
+GET /authors/a1
+GET /authors/a1/books
+GET /books/
+GET /books/1/
+GET /settings/
+GET /books/3
+GET /nums/1
+
+@group write-empty
+POST /empties {"a":1}
+POST /empties {"a":2}
+POST /books
+
+@group write-ids
+POST /books {"id":"str","t":1}
+POST /books {"id":null,"t":1}
+POST /books {}
+POST /authors {"name":"New"}
+
+@group write-cascade
+DELETE /categories/2
+
+@group write-update
+PUT /books/1 {"id":99,"title":"T"}
+PATCH /books/2 {"meta":{"lang":"fr"}}
+PUT /settings {"theme":"x"}

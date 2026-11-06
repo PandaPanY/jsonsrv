@@ -1,0 +1,427 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Alpha",
+      "price": 10,
+      "stock": 2.5,
+      "active": true,
+      "sku": "007",
+      "note": null,
+      "dims": {
+        "w": 1,
+        "h": 5
+      },
+      "vendorId": 1,
+      "tags": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "beta",
+      "price": 20,
+      "stock": 0,
+      "active": false,
+      "sku": "7",
+      "note": "n",
+      "dims": {
+        "w": 2,
+        "h": 4
+      },
+      "vendorId": 1,
+      "tags": [
+        "b"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Gamma ray",
+      "price": 10,
+      "stock": 7,
+      "active": true,
+      "sku": "x1",
+      "dims": {
+        "w": 3,
+        "h": 3
+      },
+      "vendorId": 2,
+      "tags": []
+    },
+    {
+      "id": 4,
+      "name": "delta",
+      "price": 40,
+      "stock": 1,
+      "active": false,
+      "sku": "010",
+      "note": "",
+      "dims": {
+        "w": 2,
+        "h": 2
+      },
+      "vendorId": 3,
+      "tags": [
+        "c"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Epsilon",
+      "price": 5,
+      "stock": 3,
+      "active": true,
+      "sku": "9",
+      "note": "N",
+      "vendorId": 2,
+      "tags": [
+        "a"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "zeta",
+      "price": 25,
+      "stock": 9,
+      "active": true,
+      "sku": "11",
+      "note": null,
+      "dims": {
+        "w": 1,
+        "h": 1
+      },
+      "vendorId": 1,
+      "tags": [
+        "z"
+      ]
+    }
+  ],
+  "vendors": [
+    {
+      "id": 1,
+      "name": "V1"
+    },
+    {
+      "id": 2,
+      "name": "V2"
+    },
+    {
+      "id": 3,
+      "name": "V3"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "t": "n"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "newsId": 1
+    }
+  ],
+  "people": [
+    {
+      "id": 1,
+      "n": "p"
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "personId": 1
+    }
+  ],
+  "children": [
+    {
+      "id": 1,
+      "n": "c"
+    }
+  ],
+  "toys": [
+    {
+      "id": 1,
+      "childId": 1
+    }
+  ],
+  "companies": [
+    {
+      "id": 1
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "companyId": 1
+    }
+  ],
+  "series": [
+    {
+      "id": 1
+    }
+  ],
+  "episodes": [
+    {
+      "id": 1,
+      "seriesId": 1
+    }
+  ],
+  "mice": [
+    {
+      "id": 1
+    }
+  ],
+  "tails": [
+    {
+      "id": 1,
+      "mouseId": 1
+    }
+  ],
+  "analyses": [
+    {
+      "id": 1
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "analysisId": 1
+    }
+  ],
+  "aliases": [
+    {
+      "id": 1
+    }
+  ],
+  "refs": [
+    {
+      "id": 1,
+      "aliasId": 1
+    }
+  ],
+  "buses": [
+    {
+      "id": 1
+    }
+  ],
+  "seats": [
+    {
+      "id": 1,
+      "busId": 1
+    }
+  ],
+  "heroes": [
+    {
+      "id": 1
+    }
+  ],
+  "powers": [
+    {
+      "id": 1,
+      "heroId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "u 1",
+      "n": "sp"
+    },
+    {
+      "id": "u2",
+      "n": "x"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": "u 1"
+    }
+  ],
+  "settings": {
+    "a": 1,
+    "b": {
+      "c": 2
+    }
+  },
+  "articles": [
+    {
+      "id": "1",
+      "t": "a"
+    },
+    {
+      "id": "2",
+      "t": "b"
+    }
+  ],
+  "remarks": [
+    {
+      "id": 1,
+      "articleId": "1"
+    },
+    {
+      "id": 2,
+      "articleId": "2"
+    },
+    {
+      "id": 3,
+      "articleId": "2"
+    }
+  ],
+  "orders": [
+    {
+      "id": "007",
+      "zip": "02134",
+      "code": "12e4",
+      "flag": "true",
+      "qty": "5",
+      "amt": 5,
+      "dims": null,
+      "items": [
+        1,
+        2
+      ],
+      "tags": [
+        "1",
+        "x"
+      ],
+      "memo": "A"
+    },
+    {
+      "id": "12e4",
+      "zip": "2134",
+      "code": "1e3",
+      "flag": "false",
+      "qty": "05",
+      "amt": 5.5,
+      "dims": {
+        "w": 0
+      },
+      "items": [
+        2
+      ],
+      "tags": [],
+      "memo": "a"
+    },
+    {
+      "id": "0x10",
+      "zip": "02134",
+      "code": "0x10",
+      "flag": true,
+      "qty": "5.0",
+      "amt": 0,
+      "dims": {
+        "w": 0
+      },
+      "items": [],
+      "tags": [
+        "2"
+      ],
+      "memo": ""
+    },
+    {
+      "id": "true",
+      "zip": "null",
+      "code": "null",
+      "flag": false,
+      "qty": "",
+      "amt": -1,
+      "dims": 5,
+      "items": [
+        {
+          "k": 1
+        }
+      ],
+      "tags": [
+        1
+      ],
+      "memo": null
+    },
+    {
+      "id": "null",
+      "zip": "x",
+      "code": "1000",
+      "flag": "yes",
+      "qty": "9",
+      "amt": 1000,
+      "items": [
+        null
+      ],
+      "tags": [
+        null
+      ]
+    },
+    {
+      "id": "a b",
+      "zip": "x y",
+      "code": "a&b",
+      "flag": "1",
+      "qty": "0",
+      "amt": 100,
+      "dims": {
+        "w": 1,
+        "x": {
+          "y": 2
+        }
+      },
+      "memo": "中文"
+    }
+  ],
+  "lines": [
+    {
+      "id": 1,
+      "orderId": "007",
+      "n": 1
+    },
+    {
+      "id": 2,
+      "orderId": "12e4",
+      "n": 2
+    },
+    {
+      "id": 3,
+      "orderId": "0x10",
+      "n": 3
+    },
+    {
+      "id": 4,
+      "orderId": "true",
+      "n": 4
+    },
+    {
+      "id": 5,
+      "orderId": "null",
+      "n": 5
+    },
+    {
+      "id": 6,
+      "orderId": "a b",
+      "n": 6
+    }
+  ],
+  "nums": [
+    {
+      "id": 7,
+      "v": 1
+    },
+    {
+      "id": 8,
+      "v": 2
+    }
+  ],
+  "kids": [
+    {
+      "id": 1,
+      "numId": 7
+    },
+    {
+      "id": 2,
+      "numId": 8
+    }
+  ],
+  "cfg": {
+    "x": 1
+  }
+}

@@ -1,0 +1,65 @@
+# json-server v0.17（0.17.4）README 示例和常用写法（对照 --legacy 模式）
+# 语法同 requests-v1.txt；--routes 组见 routes-017.json
+
+@group read
+GET /
+GET /posts
+GET /posts/1
+GET /posts/999
+GET /db
+GET /posts/1/comments
+GET /posts/1/comments?_sort=id&_order=desc
+GET /posts/1/comments?_start=0&_limit=2
+GET /articles/1/notes
+GET /movies/1/reviews
+GET /images/1/thumbs
+GET /posts/999/comments
+GET /articles/1?_embed=notes
+GET /movies/1?_embed=reviews
+GET /images/1?_embed=thumbs
+GET /images/1?_embed=thumbs&_embed=comments
+GET /articles/1?_embed=nope
+GET /notes/1?_expand=article
+GET /people/1?_expand=address
+GET /posts?_embed=comments
+GET /comments?_embed=post
+GET /comments?author.name=alice
+GET /posts?id=2&id=3
+GET /posts?id_ne=1
+GET /posts?views_gte=200
+GET /posts?views_lte=20
+GET /posts?title_like=Post[12]
+GET /mixed?v_lte=5
+GET /mixed?s=APPLE
+GET /mixed?s=apple
+GET /posts?q=250
+GET /posts?q=Post
+GET /posts?_sort=views&_order=desc
+GET /posts?_sort=title,views&_order=desc,asc
+GET /mixed?_sort=v
+GET /mixed?_sort=s
+GET /posts?_start=0&_end=2
+GET /posts?_start=20&_end=30
+GET /posts?_limit=3
+GET /posts?_page=2&_limit=10
+GET /posts?_page=99&_limit=5
+GET /posts?_page=2
+GET /posts/1?_embed=comments
+
+@group routes
+GET /api/posts
+GET /api/posts/1
+GET /articles/1/show
+GET /posts/anycat
+GET /articles?id=2
+
+@group write
+DELETE /posts/1
+GET /comments
+POST /posts {"title":"new post"}
+POST /profile {"name":"posted"}
+POST /articles @content-type:application/x-www-form-urlencoded title=formpost
+POST /articles @content-type:text/plain {"title":"ignored"}
+PATCH /posts/2 {"views":42}
+PUT /posts/3 {"title":"put replaced"}
+DELETE /posts/1?_dependent=comments

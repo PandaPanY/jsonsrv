@@ -1,0 +1,142 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Go Lang",
+      "price": 10,
+      "rating": 4.5,
+      "inStock": true,
+      "categoryId": 1,
+      "authorId": "a1",
+      "labels": [
+        "x",
+        "y"
+      ],
+      "meta": {
+        "lang": "en",
+        "pages": 300
+      }
+    },
+    {
+      "id": 2,
+      "title": "go tools",
+      "price": 20,
+      "rating": 3.0,
+      "inStock": false,
+      "categoryId": 2,
+      "authorId": "a2",
+      "labels": [
+        "y"
+      ],
+      "meta": {
+        "lang": "zh",
+        "pages": 150
+      }
+    },
+    {
+      "id": 3,
+      "title": "Rust <&> Book",
+      "price": 5,
+      "rating": 4.5,
+      "inStock": true,
+      "categoryId": 1,
+      "authorId": "a1",
+      "labels": [],
+      "meta": {
+        "lang": "en",
+        "pages": 90
+      }
+    },
+    {
+      "id": 4,
+      "title": "中文书",
+      "price": 30,
+      "rating": null,
+      "inStock": true,
+      "categoryId": 99,
+      "authorId": "a3",
+      "labels": [
+        "z"
+      ],
+      "meta": {
+        "lang": "zh",
+        "pages": 500
+      }
+    },
+    {
+      "id": 5,
+      "title": "Zig",
+      "price": 15,
+      "inStock": false,
+      "categoryId": 2,
+      "authorId": "a2",
+      "labels": [
+        "x"
+      ],
+      "meta": {
+        "lang": "en"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "lang"
+    },
+    {
+      "id": 2,
+      "name": "tool"
+    }
+  ],
+  "authors": [
+    {
+      "id": "a1",
+      "name": "Ann"
+    },
+    {
+      "id": "a2",
+      "name": "Bob"
+    },
+    {
+      "id": "a3",
+      "name": "Cy"
+    }
+  ],
+  "boxes": [
+    {
+      "id": 1,
+      "w": 1
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "boxId": 1
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "s": "on"
+    }
+  ],
+  "logs": [
+    {
+      "id": 1,
+      "statusId": 1
+    }
+  ],
+  "empties": [],
+  "nums": [
+    {
+      "id": 1,
+      "big": 12345678901234567890,
+      "f": 1.1,
+      "e": 1000.0
+    }
+  ],
+  "settings": {
+    "theme": "dark",
+    "n": 1
+  }
+}

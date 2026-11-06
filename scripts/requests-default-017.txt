@@ -1,0 +1,44 @@
+# 默认模式下的 v0.17 写法：JsonSrv（不带 --legacy）对照 json-server 0.17.4，数据 compare-db2.json。
+# 这些写法与 v1 不冲突，默认模式始终识别。语法同 requests-v1.txt。
+
+@group read
+GET /books?_limit=2
+GET /books?_start=1&_end=3
+GET /books?_start=1&_limit=2
+GET /books?_end=2
+GET /books?_end=-1
+GET /books?_start=99&_end=100
+GET /books?_limit=0
+GET /books?_limit=abc
+GET /books?_start=-2&_limit=1
+GET /books?_start=1
+GET /books?price_gte=10
+GET /books?price_lte=10
+GET /books?price_gte=10&price_lte=20
+GET /books?price_ne=10
+GET /books?price_ne=10&price_ne=20
+GET /books?title_like=go
+GET /books?title_like=^go
+GET /books?title_like=GO
+GET /books?id=1&id=2
+GET /books?authorId=a1&authorId=a3
+GET /books?categoryId=1&categoryId=2&inStock=true
+GET /books?q=rust
+GET /books?q=rust&_limit=1
+GET /books?_sort=price&_order=desc
+GET /books?_sort=price&_order=asc
+GET /books?_sort=title&_order=desc
+GET /books?_sort=categoryId,price&_order=desc,asc
+GET /books?_sort=meta.pages&_order=desc&_limit=2
+GET /books?_expand=category
+GET /books/1?_expand=category
+GET /books/4?_expand=category
+GET /books?_expand=category&_expand=author
+GET /books?categoryId=1&_expand=category&_limit=1
+GET /categories?_embed=books&_limit=1
+GET /categories/1/books
+GET /categories/1/books?_limit=1
+GET /categories/999/books
+GET /boxes/1/items
+GET /statuses/1/logs
+GET /authors/a1/books
